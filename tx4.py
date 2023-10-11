@@ -8,7 +8,7 @@ x = torch.unsqueeze(torch.linspace(-1, 1, 100), dim=1)
 y = -x.pow(3) + 2 * x.pow(2) + 0.2 * torch.rand(x.size())
 # y=math.sin(x)+0.2*torch.rand(x.size())
 
-
+plt.cla()
 class Net(torch.nn.Module):  # 继承 torch 的module （固定）
     # 定义层的信息，n_feature多少个输入, n_hidden每层神经元, n_output多少个输出
     def __init__(self, n_feature, n_hidden, n_output):
